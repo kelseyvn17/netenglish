@@ -2,22 +2,33 @@
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    body 
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', serif;
+    box-sizing: border-box;
+}
     img {
       vertical-align: middle;
     }
+    p{
+    color: #AAAFF0;
+    font-size: 30px;
+}
+  h1{
+    color: #ffff;
+    font-size: 100px;
+    line-height: 100px;
+    
+
+}
+    
 
     /* Position the image container (needed to position the left and right arrows) */
     .container {
-      position: relative;
+      position: center;
+      float: center;
     }
 
     /* Hide the images by default */
@@ -38,13 +49,12 @@
       top: 60%;
       width: auto;
       padding: 16px;
-      margin-top: -50px;
+      margin-top: 700px;
       color: white;
       font-weight: bold;
       font-size: 40px;
       border-radius: 0 4px 4px 0;
       user-select: none;
-      -webkit-user-select: none;
     }
 
     /* Position the "next button" to the right */
@@ -57,15 +67,6 @@
     .pre:hover,
     .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
     }
 
     /* Container for image text */
@@ -97,13 +98,199 @@
     .demo:hover {
       opacity: 1;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #FFFFFF;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .contain{
+    
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://wallpapercat.com/9/full/d/9/7/1621272.jpg?id=1628818815);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+
+    .banner{
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.banner h1{
+  color: #ffff;
+  font-size: 100px;
+  line-height: 100px;
+}
+.banner p{
+  margin: 10px 0 40px;
+  color: #AAAFF0;
+  font-size: 30px;
+}
+
+.row{   
+    display: flex;
+    height: 88%;
+    align-items: center;
+    line-height: 80px;
+    right: 100px
+}
+.col{
+    flex-basis: 50%;
+}
+    
+    
+    /*header space */
+.navbar{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width: 70px;
+  cursor: pointer
+}
+button{
+  display: inline-block;
+  padding: 10px 40px;
+  color: #ffff;
+  background-color: transparent;
+  border: 2px solid #707BF9;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: .1rem;
+  margin-top: 10px;
+  transition: .3s ease back-ground-color;
+}
+button:hover{
+  color: white;
+  background-color: #707BF9;
+}
+nav{
+  text-align: right;
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+  position: relative;
+}
+nav ul li::after{
+  content:'';
+  width: 0%;
+  height: 2px;
+  background: #AAAFF0;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+nav ul li:hover::after{
+  width: 100%;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #AAAFF0;
+  font-size: 16px;
+}
+    
+    body,
+    html {
+      height: 100%;
+    }
+
+    /*footer space*/
+    .footer h3,
+    footer p {
+      color: #707BF9;
+      font-size: 30px;
+    }
+    .footer .column h3 p {
+      font-size: 30px;
+    }
+    .footer .footer-column ul li {
+      list-style: none;
+    }
+
+    .footer .footer-column ul li a,
+    footer .footer-column a {
+      font-size: 20px;
+      text-decoration: none;
+      color: #707BF9;
+    }
+
+    .footer {
+      margin: 10%;
+      height: 80px;
+    }
+
+    .footer .footer-column {
+      float: left;
+      width: 33.33%;
+    }
+
+    .footer-column img {
+      width: 35%;
+    }
+    
   </style>
+
   <body>
-    <h2 style="text-align:center">Slideshow Gallery</h2>
+    <nav>
+        <div class="contain">
+      <div class="navbar">
+        <img src="https://github.com/kelseyvn17/netenglish/blob/main/img/logo.png?raw=true" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="english.html">English</a></li>
+            <li><a href="">Gallery</a></li>
+            <li>
+              <button>
+                <a style="color: #ffffff;" href="test.html">Test</a>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h1>GALLERY</h1>
+        </div>
+      </div>
+    </div>
+
+    </nav>
+    <h2 style="text-align:center">Gallery</h2>
 
     <div class="container">
       <div class="slide">
-        <div class="numbertext">1 / 6</div>
+        <img
+          src="https://scontent.fsgn5-4.fna.fbcdn.net/v/t1.15752-9/271211892_721699285462807_8620797843335124030_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=ae9488&_nc_ohc=L6qH3d_Ar_AAX9i5OGQ&_nc_ht=scontent.fsgn5-4.fna&oh=03_AVI2sJ9kNb0DWCfapzco15l9SccPSyPV3sxuZfZ2FgqLbQ&oe=61F7FCCA"
+          style="width:100%"
+        />
+      </div>
+
+      <div class="slide">
         <img
           src="https://sandla.org/wp-content/uploads/2021/08/english-e1629469809834.jpg"
           style="width:100%"
@@ -111,7 +298,6 @@
       </div>
 
       <div class="slide">
-        <div class="numbertext">2 / 6</div>
         <img
           src="https://sandla.org/wp-content/uploads/2021/08/english-e1629469809834.jpg"
           style="width:100%"
@@ -119,7 +305,6 @@
       </div>
 
       <div class="slide">
-        <div class="numbertext">3 / 6</div>
         <img
           src="https://sandla.org/wp-content/uploads/2021/08/english-e1629469809834.jpg"
           style="width:100%"
@@ -127,7 +312,6 @@
       </div>
 
       <div class="slide">
-        <div class="numbertext">4 / 6</div>
         <img
           src="https://sandla.org/wp-content/uploads/2021/08/english-e1629469809834.jpg"
           style="width:100%"
@@ -135,15 +319,6 @@
       </div>
 
       <div class="slide">
-        <div class="numbertext">5 / 6</div>
-        <img
-          src="https://sandla.org/wp-content/uploads/2021/08/english-e1629469809834.jpg"
-          style="width:100%"
-        />
-      </div>
-
-      <div class="slide">
-        <div class="numbertext">6 / 6</div>
         <img
           src="https://sandla.org/wp-content/uploads/2021/08/english-e1629469809834.jpg"
           style="width:100%"
@@ -214,6 +389,25 @@
         </div>
       </div>
     </div>
+       <div class="footer">
+      <div class="footer-column">
+        <img src="https://github.com/kelseyvn17/netenglish/blob/main/img/logo.png?raw=true" />
+        <h3>RMIT University Vietnam</h3>
+      </div>
+      <div class="footer-column">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">English</a></li>
+          <li><a href="">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="columnfooter-column">
+        <h3>Address</h3>
+        <p>702 Nguyen Van Linh, District 7, Ho Chi Minh City</p>
+      </div>
+    </div>
 
     <script>
       var slideIndex = 1;
@@ -251,3 +445,4 @@
     </script>
   </body>
 </html>
+
