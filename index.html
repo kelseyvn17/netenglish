@@ -129,22 +129,29 @@
         <br>
     </div>
 
-    <form action="action_page.php">
-      <div class="input-short">
-        <input type="text" id="fname" name="firstname" placeholder="First Name">
-  
-        <input type="text" id="lname" name="lastname" placeholder="Last Name">
+    <form id="form-register" action="connect.php" method="POST">
+    <div class="input-long">
+      <div class="form-control">
+        <input type="text" id="fname" name="fname" placeholder="First Name" > </br>
+        <small>Error message</small> <br>
       </div>
-
-      <div class="input-long">
-        <input type="text" id="phone" name="phone" placeholder="Phone number">
-
-        <input type="text" id="mail" name="mail" placeholder="Email">
-  
-    
-    
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <div class="form-control">
+        <input type="text" id="lname" name="lname" placeholder="Last Name" > </br>
+        <small>Error message</small>   
       </div>
+      <div class="form-control">
+        <input type="tel" id="phone" name="phone" placeholder="Phone number" >
+        <small>Error message</small>
+      </div>
+      <div class="form-control">      
+        <input type="email" id="mail" name="mail" placeholder="Email" >
+        <small>Error message</small>    
+      </div>
+      <div class="form-control">
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px" ></textarea>
+        <small>Hi</small>
+      </div>
+   </div>
 
   
       <input type="submit" value="Submit">

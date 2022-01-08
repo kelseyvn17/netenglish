@@ -295,7 +295,7 @@ button:hover{
 }
 
 /* Style inputs with type="text", select elements and textareas */
-.input-long input[type=text], textarea {
+.input-long input[type=text], input[type=tel], textarea {
     width: 100%;
     height: 70px;
     padding: 12px 20px;
@@ -366,6 +366,15 @@ button:hover{
   .footer-column img{
     width: 35%;
   }
+
+  .form-control small{
+    visibility: hidden;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    color: red;
+    font-weight: bold;
+}
 
 
 
