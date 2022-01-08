@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .container{
-    padding: 0;
+    
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/banner.jpeg);
@@ -15,39 +15,81 @@
     padding-right: 8%;
     box-sizing: border-box;
 }
+
+
+/*header space */
 .navbar{
-    height: 12%;
-    display: flex;
-    align-items: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .logo{
-    width: 70px;
-    cursor: pointer
+  width: 70px;
+  cursor: pointer
 }
-.nav{
-    flex: 1;
-    text-align: right;
+button{
+  display: inline-block;
+  padding: 10px 40px;
+  color: #ffff;
+  background-color: transparent;
+  border: 2px solid #707BF9;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: .1rem;
+  margin-top: 10px;
+  transition: .3s ease back-ground-color;
+}
+button:hover{
+  color: white;
+  background-color: #707BF9;
+}
+nav{
+  text-align: right;
 }
 nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 60px;
-}
-.footer .footer-column ul li{
   list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+  position: relative;
 }
-
-.footer .footer-column ul li a, footer .footer-column a{
-  font-size: 20px;
+nav ul li::after{
+  content:'';
+  width: 0%;
+  height: 2px;
+  background: #AAAFF0;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
 }
-
-
-
+nav ul li:hover::after{
+  width: 100%;
+}
 nav ul li a{
-    text-decoration: none;
-    color: #ffff;
-    font-size: 16px;
+  text-decoration: none;
+  color: #AAAFF0;
+  font-size: 16px;
 }
+.banner{
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.banner h1{
+  color: #ffff;
+  font-size: 100px;
+  line-height: 100px;
+}
+.banner p{
+  margin: 10px 0 40px;
+  color: #AAAFF0;
+  font-size: 30px;
+}
+
 .row{   
     display: flex;
     height: 88%;
@@ -67,22 +109,8 @@ p{
     color: #AAAFF0;
     font-size: 30px;
 }
-button{
-    display: inline-block;
-    padding: 10px 40px;
-    color: #707BF9;
-    background-color: transparent;
-    border: 2px solid #707BF9;
-    border-radius: 10px;
-    font-size: 18px;
-    letter-spacing: .1rem;
-    margin-top: 10px;
-    transition: .3s ease back-ground-color;
-}
-button:hover{
-    color: white;
-    background-color: #707BF9;
-}
+
+
 .program .row {
     height: 400px;
     margin-left: 10%;
@@ -94,6 +122,8 @@ button:hover{
     font-size: 60px;
     color: #707BF9;
 }
+
+/*footer space*/
 .footer h3, footer p{
   color: #707BF9;
   font-size: 30px;
@@ -102,6 +132,16 @@ button:hover{
 .footer .column h3 p{
   font-size: 30px;
 }
+.footer .footer-column ul li{
+  list-style: none;
+}
+
+.footer .footer-column ul li a, footer .footer-column a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #707BF9;
+}
+
 .slideshow-container h2{
     font-size: 60px;
     color: white;
@@ -375,7 +415,6 @@ button:hover{
     color: red;
     font-weight: bold;
 }
-
 
 
 
