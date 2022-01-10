@@ -1,247 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-        <title>NetEnglish - Your change start here</title>
-        <link rel="stylesheet" href="index.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="start_btn"><button>TAKE THE TEST</button></div>
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this TEST</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>30 seconds</span> per each question.</div>
+            <div class="info">2. You'll get points on the basis of your correct answers.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. Good luck while taking the test!!!.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit TEST</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
 
-    <body>
-        <!-- Header section -->
+    <!-- Quiz Box -->
+    <div class="quiz_box">
         <header>
-            <nav>
-                <a href="home.html"><img src="img/logo.png"></a>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="english.html">English</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><span><a href="test.html">Test</a></span></li>
-                </ul>
-            </nav>
+            <div class="title">TEST</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">30</div>
+            </div>
+            <div class="time_line"></div>
         </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
 
-        <!-- Banner section -->
-        <div class="banner">
-            <div class="content">
-                <h1>Welcome to<br> Net English</h1>
-                <p>We are here to support you</p>
-                <button type="button"><a href="#program">Explore</a></button>
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
             </div>
-        </div>
-
-        <!-- Program section -->
-        <div id="program" class="program">
-            <div class="content">
-                <h2>Program</h2>
-                <p>If you know why you want to study, setting goals is easy.</p>
-            </div>
-            <div class="container">
-                <div class="box">
-                    <img src="img/kid_box.jpg">
-                    <div class="overlay">
-                        <h3>Children</h3>
-                        <p>NetEnglish has two teams for kids, in which the babyhero team will be between the age of 4-6 years old, and children who are 7 to 12 years old will come to the superhero team.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="img/adult.jpg">
-                    <div class="overlay">
-                        <h3>Adult</h3>
-                        <p>Being self-assured in your English can improve your life in a variety of ways. It can help you better your social life and job opportunities, as well as making the most of the internet.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="img/business.jpg">
-                    <div class="overlay">
-                        <h3>Business</h3>
-                        <p>Business English classes are designed for people who work in offices. Each lesson includes a number of sentences that you may click on to learn how to pronounce.You'll learn about business terminology, topics, and concerns while exploring business English through authentic texts and video courses.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- English section -->
-        <div class="why-english">
-          <div class="text">
-              <h2>Why is English important?</h2>
-              <p>Let research the answer with NetEnglish right here, guys.</p>
-          </div>
-          <div class="slide fade">
-              <img src="img/eng4.png" onclick="currentSlide(2)" style="width:100%">
-              <div class="slide-text">In the world, there are appoximately 1.5 billion people who can speak English.</div>
-            </div>
-            <div class="slide fade">
-              <img src="img/eng1.png" onclick="currentSlide(3)" style="width:100%">
-              <div class="slide-text">Speaking English increases the chance of a person to get a better job.</div>
-            </div>
-            <div class="slide fade">
-              <img src="img/eng3.png" onclick="currentSlide(1)" style="width:100%">
-              <div class="slide-text">English can connect a lot of different people, country, and culture.</div>
-            </div>
-        </div>
-      
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-        
-        <!-- Feedback section -->
-        <div class="feedback">
-            <h2>What people talk about NetEnglish?</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testbox">
-                            <div class="insidebox">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, tenetur dolorum eius, eveniet possimus fugit, obcaecati iusto autem repellat nihil porro harum laboriosam iure sint aspernatur magnam est dolores corporis?</p>
-                                <div class="detail">
-                                    <div class="imgbox">
-                                        <img src="img/ava1.jpg">
-                                    </div>
-                                    <h3>Student<br><span>John Keats</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testbox">
-                            <div class="insidebox">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, tenetur dolorum eius, eveniet possimus fugit, obcaecati iusto autem repellat nihil porro harum laboriosam iure sint aspernatur magnam est dolores corporis?</p>
-                                <div class="detail">
-                                    <div class="imgbox">
-                                        <img src="img/ava2.jpg">
-                                    </div>
-                                    <h3>Student<br><span>John Keats</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testbox">
-                            <div class="insidebox">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, tenetur dolorum eius, eveniet possimus fugit, obcaecati iusto autem repellat nihil porro harum laboriosam iure sint aspernatur magnam est dolores corporis?</p>
-                                <div class="detail">
-                                    <div class="imgbox">
-                                        <img src="img/ava3.jpg">
-                                    </div>
-                                    <h3>Student<br><span>John Keats</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                effect: 'coverflow',
-                grabCursor: true,
-                centeredSlidé: true,
-                slidesPerView:'auto',
-                coverflowEffect:{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
-        </script>
-
-        <!-- Contact section -->
-        <div class="contact">
-            <div class="text">
-                <h2>Let's get in touch
-                </h2>
-                <br>
-            </div>
-        
-            <form action="action_page.php">
-              <div class="input-short">
-                <input type="text" id="fname" name="firstname" placeholder="First Name">
-          
-                <input type="text" id="lname" name="lastname" placeholder="Last Name">
-              </div>
-        
-              <div class="input-long">
-                <input type="text" id="phone" name="phone" placeholder="Phone number">
-        
-                <input type="text" id="mail" name="mail" placeholder="Email">
-          
-            
-            
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-              </div>
-        
-          
-              <input type="submit" value="Submit">
-          
-            </form>
-        </div>
-        
-        <!-- Footer space-->
-        <footer class="footer-distributed">
-
-            <div class="footer-left">
-                <img src="img/logo_light.png">
-        
-                <p class="footer-links">
-                    <a href="#">Home</a>
-                    |
-                    <a href="#">About</a>
-                    |
-                    <a href="#">English</a>
-                    |
-                    <a href="#">Gallery</a>
-                </p>
-        
-                <p class="footer-company-name">Copyright © 2021 <strong>N3T team</strong> All rights reserved</p>
-            </div>
-        
-            <div class="footer-center">
-                <div>
-                    <i class="fa fa-map-marker"></i>
-                    <p><span>District 7</span>
-                        Ho Chi Minh city</p>
-                </div>
-        
-                <div>
-                    <i class="fa fa-phone"></i>
-                    <p>+84 96*1*1**0</p>
-                </div>
-                <div>
-                    <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:npyt17052000@gmail.com">s123569@rmit.edu.vn</a></p>
-                </div>
-            </div>
-            <div class="footer-right">
-                <p class="footer-company-about">
-                    <span>About the company</span>
-                    <strong>N3T - NetEnglish</strong> is a student team from RMIT University Vietnam.
-                </p>
-                <div class="footer-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-youtube"></i></a>
-                </div>
-            </div>
+            <button class="next_btn">Next Question</button>
         </footer>
-      
-  <script src="app.js"></script>
-  
-  
-  </body>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the TEST!</div>
+        <div class="score_text">
+        </div>
+        <div class="buttons">
+            <button class="restart">Retake TEST</button>
+            <button class="quit">Quit TEST</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>
