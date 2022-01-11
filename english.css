@@ -9,6 +9,56 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+/* header*/
+header{
+	width: 100%;
+	background: white;
+	padding-left: 8%;
+	padding-right: 8%;
+	box-sizing: border-box;
+	align-items: center;
+  }
+  nav{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  nav img{
+	width: 20%;
+	cursor: pointer;
+  }
+  nav ul{
+	margin: 10px 0;
+	text-align: right;
+	align-items: center;
+  }
+  nav ul li{
+	list-style: none;
+	display: inline-flex;
+	margin-left: 60px;
+	position: relative;
+	flex-wrap: wrap;
+  }
+  nav ul li::after{
+	content:'';
+	width: 0%;
+	height: 3px;
+	background: #707BF9;
+	display: block;
+	margin: auto;
+	transition: 0.3s;
+  }
+  nav ul li:hover::after{
+	width: 100%;
+  }
+  nav ul li a{
+	text-decoration: none;
+	display: inline-flex;
+	flex-wrap: wrap;
+	color: #1a1c38;
+	font-size: 16px;
+  }
 a {
 	text-decoration: none;
 }
@@ -51,7 +101,7 @@ p {
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid violet;
+	border: 2px solid #707BF9;
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -61,7 +111,7 @@ p {
 }
 .cta:hover {
 	color: white;
-	background-color: #AAAFF0;
+	background-color: #707BF9;
 }
 .brand h1 {
 	font-size: 3rem;
@@ -76,7 +126,7 @@ p {
 
 /* Intro Section */
 #hero {
-	background-image: url(./img/hero-bg.png);
+	background-image: url(img/background.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -124,7 +174,7 @@ p {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: #AAAFF0;
+	background-color: #707BF9;
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
@@ -181,7 +231,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #707BF9 0%, #707BF9 100%);
 	opacity: 0.9;
 	z-index: -1;
 }
@@ -236,7 +286,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #707BF9 0%, #707BF9 100%);
 	color: white;
 }
 #projects .project-info h1 {
@@ -352,6 +402,7 @@ p {
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
+}	
 	/* End Project */
   
 /*footer section*/
