@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   
   
   
@@ -18,16 +19,16 @@
       vertical-align: middle;
     }
     video {
-        ertical-align: middle;
+        vertical-align: middle;
 
     }
     p{
     color: #AAAFF0;
-    font-size: 30px;
+    font-size: 16px;
 }
   h1{
     color: #ffff;
-    font-size: 100px;
+    font-size: 72px;
     line-height: 100px;
     
 
@@ -226,40 +227,166 @@ nav ul li a{
       height: 100%;
     }
 
-    /*footer space*/
-    .footer h3,
-    footer p {
-      color: #707BF9;
-      font-size: 45px;
-    }
-    .footer .column h3 p {
-      font-size: 45px;
-    }
-    .footer .footer-column ul li {
-      list-style: none;
-    }
+    footer {
+  position: fixed;
+  bottom: 0;
+}
 
-    .footer .footer-column ul li a,
-    footer .footer-column a {
-      font-size: 25px;
-      text-decoration: none;
-      color: #707BF9;
-    }
+@media (max-height:800px) {
+  footer {
+      position: static;
+  }
+  header {
+      padding-top: 40px;
+  }
+}
 
-    .footer {
-      margin: 2%;
-      height: 80px;
-    }
+.footer-distributed {
+  background-color: #707BF9;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+/* Footer left */
 
-    .footer .footer-column {
-      float: left;
-      width: 33.33%;
-    }
+.footer-distributed .footer-left {
+  width: 30%;
+}
 
-    .footer-column img {
-      width: 35%;
-      height: 50%;
-    }
+.footer-distributed img{
+  width: 30%;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #1a1c38;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #707BF9;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #ffffff;
+  text-decoration: none;
+  ;
+}
+
+/*Footer right*/
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #1a1c38;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #AAAFF0;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  background-color: #1a1c38;
+}
+
+.footer-links a:hover {
+  color: #1a1c38;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+  .footer-distributed .footer-center i {
+      margin-left: 0;
+  }
+}   
     
   </style>
 
@@ -276,14 +403,16 @@ nav ul li a{
     <nav>
         <div class="contain">
       <div class="navbar">
-        <img src="https://github.com/kelseyvn17/netenglish/blob/main/img/logo.png?raw=true" class="logo" />
+        <img src="img/logo.png" class="logo" />
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="english.html">English</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a style="color: #ffffff;" href="test.html">Test</a></li>
+            <li>
+                <a href="test.html">Test</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -405,25 +534,54 @@ nav ul li a{
         </div>
       </div>
     </div>
-       <div class="footer">
-      <div class="footer-column">
-        <img src="https://github.com/kelseyvn17/netenglish/blob/main/img/logo.png?raw=true" />
-        <h3>RMIT University Vietnam</h3>
-      </div>
-      <div class="footer-column">
-        <h3>Categories</h3>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">English</a></li>
-          <li><a href="">Gallery</a></li>
-        </ul>
-      </div>
-      <div class="columnfooter-column">
-        <h3>Address</h3>
-        <p>702 Nguyen Van Linh, District 7, Ho Chi Minh City</p>
-      </div>
-    </div>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="img/logo_light.png">
+    
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="about.html">About</a>
+                |
+                <a href="english.html">English</a>
+                |
+                <a href="gallery.html">Gallery</a>
+            </p>
+    
+            <p class="footer-company-name">Copyright © 2021 <strong>N3T team</strong> All rights reserved</p>
+        </div>
+    
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>District 7</span>
+                    Ho Chi Minh city</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+84 96*1*1**0</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:npyt17052000@gmail.com">s123569@rmit.edu.vn</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>N3T - NetEnglish</strong> is a student team from RMIT University Vietnam.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script>
       var slideIndex = 1;
