@@ -68,9 +68,14 @@ function isPhone(phone) {
   return /^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/.test(phone);
 }
 
-form.addEventListener("submit", (e) =>{
+
+
+form.addEventListener("submit", (e) => {
+    if (true) {
+        console.log('True')
+    }
     e.preventDefault();
 
-    validateInput()
+    validateInput();
     
 })
