@@ -15,9 +15,9 @@
         <!-- Header section -->
         <header>
             <nav>
-                <a href="home.html"><img src="img/logo.png"></a>
+                <a href="index.html"><img src="img/logo.png"></a>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="english.html">English</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
@@ -100,7 +100,7 @@
                     <div class="swiper-slide">
                         <div class="testbox">
                             <div class="insidebox">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, tenetur dolorum eius, eveniet possimus fugit, obcaecati iusto autem repellat nihil porro harum laboriosam iure sint aspernatur magnam est dolores corporis?</p>
+                                <p>I think NetEnglish has totally changed my life. I joined the club for free, and now I know how to speak English to a foreingner, and I even got more confident!</p>
                                 <div class="detail">
                                     <div class="imgbox">
                                         <img src="img/ava1.jpg">
@@ -113,12 +113,12 @@
                     <div class="swiper-slide">
                         <div class="testbox">
                             <div class="insidebox">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, tenetur dolorum eius, eveniet possimus fugit, obcaecati iusto autem repellat nihil porro harum laboriosam iure sint aspernatur magnam est dolores corporis?</p>
+                                <p>Thank you NetEnglish, because of the friends I have made and the fun I have had while joining the club. It is a pleasure meeting you guys! </p>
                                 <div class="detail">
                                     <div class="imgbox">
                                         <img src="img/ava2.jpg">
                                     </div>
-                                    <h3>Student<br><span>John Keats</span></h3>
+                                    <h3>Student<br><span>Alibaba</span></h3>
                                 </div>
                             </div>
                         </div>
@@ -126,12 +126,12 @@
                     <div class="swiper-slide">
                         <div class="testbox">
                             <div class="insidebox">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, tenetur dolorum eius, eveniet possimus fugit, obcaecati iusto autem repellat nihil porro harum laboriosam iure sint aspernatur magnam est dolores corporis?</p>
+                                <p>Hello, this is just a random feedback that is put here to show that we worked really hard to put this website together.</p>
                                 <div class="detail">
                                     <div class="imgbox">
                                         <img src="img/ava3.jpg">
                                     </div>
-                                    <h3>Student<br><span>John Keats</span></h3>
+                                    <h3>Student<br><span>Elon Musk</span></h3>
                                 </div>
                             </div>
                         </div>
@@ -167,28 +167,35 @@
                 <br>
             </div>
         
-            <form action="action_page.php">
-              <div class="input-short">
-                <input type="text" id="fname" name="firstname" placeholder="First Name">
-          
-                <input type="text" id="lname" name="lastname" placeholder="Last Name">
+            <form id="form-register" action="connect.php" method="POST">
+            <div class="input-long">
+              <div class="form-control">
+                <input type="text" id="fname" name="fname" placeholder="First Name (At least 3 characters)" > </br>
+                <small>Error message</small> <br>
               </div>
-        
-              <div class="input-long">
-                <input type="text" id="phone" name="phone" placeholder="Phone number">
-        
-                <input type="text" id="mail" name="mail" placeholder="Email">
-          
-            
-            
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <div class="form-control">
+                <input type="text" id="lname" name="lname" placeholder="Last Name (At least 3 characters)" > </br>
+                <small>Error message</small>   
               </div>
+              <div class="form-control">
+                <input type="text" id="phone" name="phone" placeholder="Phone number (Must be 10-11 characters and can be seperated by hyphens (-)" >
+                <small>Error message</small>
+              </div>
+              <div class="form-control">      
+                <input type="text" id="mail" name="mail" placeholder="Email (Must be a valid email)" >
+                <small>Error message</small>    
+              </div>
+              <div class="form-control">
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px" ></textarea>
+                <small>Error message</small>
+              </div>
+           </div>
         
           
               <input type="submit" value="Submit">
           
             </form>
-        </div>
+          </div>
         
         <!-- Footer space-->
         <footer class="footer-distributed">
@@ -241,6 +248,7 @@
         </footer>
       
   <script src="app.js"></script>
+  <script src="verify.js"></script>
   
   
   </body>

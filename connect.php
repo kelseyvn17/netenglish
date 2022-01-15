@@ -11,23 +11,23 @@ if($conn->connect_error){
     die('Connection Failed');
 } else {
     $stmt = $conn->prepare("insert into contact(fname, lname, mail, phone, message) 
-    values(?, ?, ?, ?, ?");
-    $stmt->bind_param("sssss", $fname, $lname, $mail, $phone, $message);
+    values(?, ?, ?, ?, ?)");
+    $stmt->bind_param('sssss', $fname, $lname, $mail, $phone, $message);
     $stmt->execute();
     echo "registration successfully";
     $stmt->close();
     $conn->close();
-    header("localhost/new");
+    header("Location: index.html");
 }
 /*Validation*/
-// Function to check email regex
-function is_email($email) {
-    $is_email = true;
+// Function to check mail regex
+function is_mail($mail) {
+    $is_mail = true;
     $regex = '/^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\.]+)\.([a-zA-Z]{2,5})$/';
-    if(!preg_match($regex, $email)){
-        $is_email = false;
+    if(!preg_match($regex, $mail)){
+        $is_mail = false;
     }
-    return $is_email;
+    return $is_mail;
 }
 // Function to check phone regex
 function is_phone($phone) {
@@ -55,10 +55,10 @@ function validateInput(){
             $has_error = true;
         }
     }
-            // Checks if email is valid
-            if(!is_email($email)) {
+            // Checks if mail is valid
+            if(!is_mail($mail)) {
                 //error
-                $_SESSION['email_error'] = true;
+                $_SESSION['mail_error'] = true;
                 $has_error = true;
             }
             // Checks if phone is valid
@@ -67,5 +67,4 @@ function validateInput(){
                 $_SESSION['phone_error'] = true;
                 $has_error = true;
             }
-            return $has_error;        
 ?>
